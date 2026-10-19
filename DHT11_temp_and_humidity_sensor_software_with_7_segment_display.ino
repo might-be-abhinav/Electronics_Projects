@@ -90,10 +90,9 @@ void displayDigit(int number){
                           {3, 4, 5, 6, 7, 8, 9},    // 8
                           {3, 4, 5, 6, 7, 8}        // 9
                         };
-  int arrayLength = sizeof(numArray[number]) / sizeof(numArray[number][0]);
-  for(int pinIndex = 0; pinIndex < arrayLength ; pinIndex++){
+  for(int pinIndex = 0; pinIndex < 7 ; pinIndex++){
     digitalWrite(numArray[number][pinIndex],LOW);
-  }
+  }//earlyier arrayLength was declared but it is not needed here as array length will alwasy be 7 here as rest of the empty will be made 0 automatically so replacing it with 7 to save space
 }
 
 void displayReset(){
